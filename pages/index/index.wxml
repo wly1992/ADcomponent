@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="header">
+  <view class='header_group' bindtap='swichToGroups'>群组</view>
+  <view class='header_search'>
+    <input class='search_input' placeholder="搜索" placeholder-style="font-size:30rpx; color:#8a898f" bindinput="search" bindfocus="focus" bindblur="blur"></input>
+    <icon class='search_icon' type="search" color='#8a898f' size="16"/>
+  </view>
+  <view class='header_plus' data-data="{{contactList}}" bindtap='swichToMap'>
+    <image class='header_plus_icon' src='../img/map.svg'></image>
+  </view>
+</view>
+
+<view class='main'>
+  <view class='content' wx:if="{{!searchResult}}">
+    <scroll-view class="scroll-view" scroll-y style="height: {{height}}px" scroll-into-view="{{scrollIntoView}}">
+      <view class='my_card' id="Card">
+        <image class='card_pic' src='../img/head_pic.jpg'></image>
+        <view class="card_mes">
+          <view class='card_name'>李晗煜</view>
+        </view>
+      </view>
+
+      <block wx:for="{{contactList}}" wx:key="">
+        <view class='list_area' id="{{item.firstLetter}}">
+          <view class='letter'>{{item.firstLetter}}</view>
+          <view wx:for="{{item.mes}}" wx:for-item="name" wx:key="" wx:for-index="idx">
+            <view class="name {{idx==item.mes.length-1?'last':''}}" data-mes="{{name}}" bindtap='swichToDetail'>
+              <view>{{name.name}}</view>
+              <view class='phone'>
+                <image style='width:100%;height:100%' src='../img/phone.svg'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+
+    <view class='right_bar' style="background-color:{{color}}" catchtouchstart='touchstart' catchtouchmove='touchmove' catchtouchend='touchend'>
+      <view class='right_letter' wx:for="{{letterList}}" wx:key="">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='mark' wx:if="{{mark}}"></view>
+
+  <view class='content' wx:if="{{searchResult}}">
+    <view class='list_area' wx:for="{{searchList}}" wx:key=""> 
+      <view class="name {{index==searchList.length-1?'last':''}}"  bindtap='swichToDetail'>
+        <view>{{item.name}}</view>
+        <view class='phone'>
+          <image style='width:100%;height:100%' src='../img/phone.svg'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='big_letter' wx:if="{{showBigLetter}}">{{searchLetter}}</view>
+
+

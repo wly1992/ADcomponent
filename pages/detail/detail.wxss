@@ -1,0 +1,59 @@
+/* pages/detail/detail.wxss */
+page{
+  background-color:#f0eff5;
+}
+.my_card{
+  width: 100%;
+  border-top: 2rpx #eae9ee solid;
+  border-bottom: 2rpx #eae9ee solid;
+  background-color: #fff;
+  height: 370rpx;
+}
+.card_pic{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  display: block;
+  border: 2rpx #eae9ee solid;
+  margin: 70rpx auto 0 auto;
+}
+.card_name{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+.group_card{
+  width: 100%;
+  margin-top: 30rpx;
+  border-top: 2rpx #eae9ee solid;
+  border-bottom: 2rpx #eae9ee solid;
+  background-color: #fff;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.item{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 2rpx #eae9ee solid;
+  position: relative;
+}
+.item.noborder{
+  border-bottom:none;
+}
+.right_arrow{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 25rpx;
+}
+.value{
+  color: #2a77d1;
+}
+.button{
+  margin-top: 30rpx;
+  padding: 0 40rpx;
+}

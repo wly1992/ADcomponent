@@ -1,0 +1,24 @@
+<!--pages/detail/detail.wxml-->
+<view class='my_card'>
+  <image class='card_pic' src='../img/head_pic.jpg'></image>
+  <view class='card_name'>李晗煜</view> 
+</view>
+
+<view class='group_card'>
+  <view class='item noborder' bindtap='enterGroup'>群组：<text class='value'>{{mes.group}}</text>
+    <image class='right_arrow' src='../img/right_arrow.svg'></image>
+  </view>
+</view>
+
+<view class='group_card'>
+  <view class='item' bindtap='enterMap'>城市：<text class='value'>{{mes.city}}</text>
+    <image class='right_arrow' src='../img/right_arrow.svg'></image>
+  </view>
+  <view class='item'>手机：<text class='value'>{{mes.phone}}</text></view>
+  <view class='item noborder'>公司：<text class='value'>{{mes.company}}</text></view>
+</view>
+
+<view class='button'>
+  <button type='primary' bindtap='call'>打电话</button>
+</view>
+

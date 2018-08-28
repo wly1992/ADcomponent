@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/map/map",
+    "pages/detail/detail",
+    "pages/groups/groups",
+    "pages/groupDetail/groupDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "通讯录",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  }
+}
